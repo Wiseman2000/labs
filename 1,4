@@ -1,0 +1,15 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+int a,b;
+cin>>a>>b;
+a=pow(a,2);
+b=pow(b,2);
+cout<<a+b<<endl;
+cout <<fabs(a-b)<<endl;
+cout<<a*b<<endl;
+cout<<(double)a/b<<endl;
+}
