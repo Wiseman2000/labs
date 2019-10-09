@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int N,K,ost;
+	cin>>K>>N;
+	ost=(K%7+N-1)%7;
+	if (ost==0)
+	{
+	    cout<<7;
+	}
+	else
+	{
+	    cout<<ost<<endl;
+	}
+}
