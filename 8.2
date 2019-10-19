@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int A,B,C,min,sum;
+cin»A»B»C;
+if (B<A && B<C)
+{
+min=B;
+}
+if (A<B && A<C)
+{
+min=A;
+}
+
+if (C<A && C<B)
+{
+min=C;
+}
+sum=A+B+C-min;
+cout«sum«endl; 
+}
