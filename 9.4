@@ -1,0 +1,280 @@
+#include <iostream>
+
+#include <clocale>
+
+#include <string>
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+int main()
+
+{
+
+	int x, x1, x2, x3;
+
+	string a;
+
+	cin >> x;
+	x1 = x % 10;
+	x2 = (x % 100) / 10;
+	x3 = x / 100;
+	setlocale(LC_ALL, "Russian");
+	switch (x3)
+	{
+	case 1:
+		a = "сто";
+		break;
+	case 2:
+		a = "двести";
+		break;
+	case 3:
+		a = "триста";
+		break;
+	case 4:
+		a = "четыреста";
+		break;
+	case 5:
+		a = "пятьсот";
+		break;
+	case 6:
+		a = "шестьсот";
+		break;
+	case 7:
+		a = "семьсот";
+		break;
+	case 8:
+		a = "восемьсот";
+		break;
+	case 9:
+		a = "девятьсот";
+		break;
+	}
+	if (x2 > 1)
+	{
+		switch (x2)
+		{
+		case 2:
+			a = a + " двадцать";
+			break;
+		case 3:
+			a = a + " тридцать";
+			break;
+		case 4:
+			a = a + " сорок";
+			break;
+		case 5:
+			a = a + " пятьдесят";
+			break;
+		case 6:
+			a = a + " шестьдесят";
+			break;
+		case 7:
+			a = a + " семьдесят";
+			break;
+		case 8:
+			a = a + " восемьдесят";
+			break;
+		case 9:
+			a = a + " девяносто";
+			break;
+		}
+	
+	}
+
+	if (x % 100 > 19)
+	{
+		switch (x1)
+
+		{
+
+		case 1:
+
+			a = a + " один";
+
+			break;
+
+		case 2:
+
+			a = a + " два";
+
+			break;
+
+		case 3:
+
+			a = a + " три";
+
+			break;
+
+		case 4:
+
+			a = a + " четыре";
+
+			break;
+
+		case 5:
+
+			a = a + " пять";
+
+			break;
+
+		case 6:
+
+			a = a + " шесть";
+
+			break;
+
+		case 7:
+
+			a = a + " семь";
+
+			break;
+
+		case 8:
+
+			a = a + " восемь";
+
+			break;
+
+		case 9:
+
+			a = a + " девять";
+
+			break;
+		}
+	}
+	else
+	{
+		if (x % 100 < 10)
+		{
+			switch (x1)
+		case 1:
+			{
+				a = a + " один";
+
+				break;
+
+		case 2:
+
+			a = a + " два";
+
+			break;
+
+		case 3:
+
+			a = a + " три";
+
+			break;
+
+		case 4:
+
+			a = a + " четыре";
+
+			break;
+
+		case 5:
+
+			a = a + " пять";
+
+			break;
+
+		case 6:
+
+			a = a + " шесть";
+
+			break;
+
+		case 7:
+
+			a = a + " семь";
+
+			break;
+
+		case 8:
+
+			a = a + " восемь";
+
+			break;
+
+		case 9:
+
+			a = a + " девять";
+
+			break;
+			}
+		}
+		else
+		{
+			switch (x % 100)
+			{
+			case 10:
+
+				a = a + " десять";
+
+				break;
+
+			case 11:
+
+				a = a + " одиннадцать";
+
+				break;
+
+			case 12:
+
+				a = a + " двенадцать";
+
+				break;
+
+			case 13:
+
+				a = a + " тринадцать";
+
+				break;
+
+			case 14:
+
+				a = a + " четырнадцать";
+
+				break;
+
+			case 15:
+
+				a = a + " пятнадцать";
+
+				break;
+
+			case 16:
+
+				a = a + " шестнадцать";
+
+				break;
+
+			case 17:
+
+				a = a + " семнадцать";
+
+				break;
+
+			case 18:
+
+				a = a + " восемнадцать";
+
+				break;
+
+			case 19:
+
+				a = a + " девятнадцать";
+
+				break;
+			}
+		}
+	}
+		cout << a << endl;
+	}
