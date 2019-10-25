@@ -1,0 +1,43 @@
+#include <iostream>
+#include <math.h>
+
+
+
+
+
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main()
+
+{
+
+	int   k;
+	double p, S, pr;
+	cin >> p;
+	S = 1000;
+	k = 0;
+	pr = p / 100;
+	while (S <= 1100)
+	{
+		S = S + S * pr;
+		++k;
+	}
+	cout << k << " " << S;
+}
