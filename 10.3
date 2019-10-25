@@ -1,0 +1,42 @@
+#include <iostream>
+
+
+
+
+
+
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main()
+
+{
+
+	int  N, S,k;
+
+	cin >> N;
+	S = 1;
+	k = 3;
+	for (int i = 1;i < N;i++)
+	{
+		S = S + k;
+		k = k + 2;
+	}
+	cout << S << endl;
+}
