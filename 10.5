@@ -1,0 +1,41 @@
+#include <iostream>
+#include <math.h>
+
+
+
+
+
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main()
+
+{
+
+	int  N;
+	double A, S;
+	cin >> A >> N;
+	S=1-A;
+	for (int i = 1;i < N;i++)
+	{
+		S = S + pow(-A, i + 1);
+	}
+	cout << S << endl;
+}
+
