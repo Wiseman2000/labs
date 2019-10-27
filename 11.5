@@ -1,0 +1,46 @@
+#include <iostream>
+#include <math.h>
+
+
+
+
+
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main()
+
+{
+
+	int   A, B;
+	cin >> A >> B;
+	while ((A != 0) && (B != 0))
+	{
+		if (A > B)
+		{
+			A = A % B;
+		}
+		if ((A < B) && (A!=0) && (B!=0))
+		{
+			B = B % A;
+		}
+	}
+	cout << A + B;
+	
+}
