@@ -1,0 +1,91 @@
+#include <iostream>
+#include "Windows.h"
+
+#include <string>
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+int main()
+
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	int N;
+
+	string C,a;
+	setlocale(LC_ALL, "Russian");
+	cin >> C >> N;
+
+	if (C == "С")
+	{
+		switch (N)
+		{
+		case 0:
+			a = "С";
+			break;
+		case 1:
+			a = "З";
+			break;
+		case -1:
+			a = "В";
+			break;
+		}
+	}
+	if (C == "З")
+	{
+		switch (N)
+		{
+		case 0:
+			a = "З";
+			break;
+		case 1:
+			a = "Ю";
+			break;
+		case -1:
+			a = "С";
+			break;
+		}
+	}
+	if (C == "Ю")
+	{
+		switch (N)
+		{
+		case 0:
+			a = "Ю";
+			break;
+		case 1:
+			a = "В";
+			break;
+		case -1:
+			a = "З";
+			break;
+		}
+	}
+	if (C == "В")
+	{
+		switch (N)
+		{
+		case 0:
+			a = "В";
+			break;
+		case 1:
+			a = "С";
+			break;
+		case -1:
+			a = "Ю";
+			break;
+		}
+	}
+	cout << a ;
+}
+
+	
