@@ -1,0 +1,51 @@
+#include <iostream>
+#include <math.h>
+
+
+
+
+
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+
+
+double Quarter(double x, double y)
+{
+	if ((x > 0) && (y > 0))
+	{
+		cout << "I" << endl;
+	}
+	if ((x > 0) && (y < 0))
+	{
+		cout << "II" << endl;
+	}
+	if ((x < 0) && (y < 0))
+	{
+		cout << "III" << endl;
+	}
+	if ((x < 0) && (y > 0))
+	{
+		cout << "IV" << endl;
+	}
+	return 0;
+}
+
+
+int main()
+
+{
+	double x1, y1, x2, y2, x3, y3;
+	cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+	Quarter(x1, y1);
+	Quarter(x2, y2);
+	Quarter(x3, y3);
+}
