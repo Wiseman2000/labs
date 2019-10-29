@@ -1,0 +1,38 @@
+#include <iostream>
+#include <math.h>
+
+
+
+
+
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+
+
+double RingS(double R1, double R2)
+{
+	double s;
+	s = 3.14 * pow(R1, 2) - 3.14 * pow(R2, 2);
+	cout << s << endl;
+	return 0;
+}
+
+
+int main()
+
+{
+	double r1,r2,r3,r4,r5,r6;
+	cin >> r1 >> r2 >> r3 >> r4 >> r5 >> r6;
+	RingS(r1, r2);
+	RingS(r3, r4);
+	RingS(r5, r6);
+}
