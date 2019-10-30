@@ -1,0 +1,56 @@
+#include <iostream>
+#include <math.h>
+
+
+
+
+
+
+
+
+using namespace std;
+
+
+
+
+
+
+
+
+
+double Fact2(int N)
+{
+	if ((N % 2) == 0)
+	{
+		double f=2;
+		double k=2;
+		while (k != N)
+		{
+			f = f * (k + 2);
+			k = k + 2;
+		}
+		cout << f << endl;
+	}
+	if ((N % 2) == 1)
+	{
+		double f = 1;
+		double k = 1;
+		while (k != N)
+		{
+			f = f * (k + 2);
+			k = k + 2;
+		}
+		cout << f << endl;
+	}
+	return 0;
+}
+
+
+int main()
+
+{
+	int x1,x2;
+	cin >> x1 >> x2;
+	Fact2(x1);
+	Fact2(x2);
+}
