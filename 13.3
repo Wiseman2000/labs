@@ -1,1 +1,25 @@
+#include <iostream>
+#include <math.h>
 
+
+
+
+
+
+
+
+using namespace std;
+int main()
+{
+	int n, a, b;
+	cin >> a >> b >> n;
+	int mas[3000];
+	mas[1] = a;
+	mas[2] = b;
+	cout << mas[1] << " " << mas[2] << " ";
+	for (int i = 3;i < n;i++)
+	{
+		mas[i] = mas[i-2]+mas[i-1];
+		cout << mas[i] << " ";
+	}
+}
