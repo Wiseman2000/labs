@@ -1,0 +1,24 @@
+#include <iostream>
+#include <math.h>
+
+
+
+
+
+
+
+
+using namespace std;
+int main()
+{
+	int n,a,d,k;
+	cin >> n >> a >> d;
+	k = a;
+	int mas[3000];
+	for (int i = 1;i < n;i++)
+	{
+		mas[i] = k;
+		k = a * pow(d, i);
+		cout << mas[i] << " ";
+	}
+}
