@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+	double K, L, S, x,N;
+	double mas[1000];
+	cin >> N >> K >> L;
+	for (int i = 1;i <= N;i++)
+	{
+		cin >> mas[i];
+	}
+	S = 0;
+	x = L - K + 1;
+	for (int i = K;i <= L;i++)
+	{
+		S = S + mas[i];
+	}
+	cout << S / x << endl;
+}
