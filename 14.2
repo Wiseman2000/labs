@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+	int j, N, d;
+	int a;
+	int mas[1000];
+	cin >> N ;
+	for (int i = 1;i <= N;i++)
+	{
+		cin >> mas[i];
+	}
+	a = 1;
+	j = 3;
+	d = mas[2] - mas[1];
+	while ((a == 1) && (j<=N))
+	{
+		if (d != mas[j] - mas[j - 1])
+		{
+			a = 0;
+		}
+		j++;
+	}
+	if (a == 1)
+	{
+		cout << d << endl;
+	}
+	else
+	{
+		cout << "0" << endl;
+	}
+
+
+}
