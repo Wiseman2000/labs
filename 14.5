@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+	int k1, k2, N;
+	int mas[1000];
+	cin >> N;
+	for (int i = 1;i <= N;i++)
+	{
+		cin >> mas[i];
+	}
+	k1 = 0;
+	k2 = 0;
+	for (int i = 1; i <= N; i++)
+	{
+		for (int j = i+1; j <= N; j++)
+		{
+			if ((mas[i] == mas[j]) && (i != j))
+			{
+				k1 = i;
+				k2 = j;
+			}
+		}
+	}
+	cout << k1 << " " << k2 << endl;
+}
