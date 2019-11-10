@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+	int s, N, k;
+	int a[1000];
+	cin >> N;
+	for (int i = 1;i <= N;i++)
+	{
+		cin >> a[i];
+	}
+	k = 0;
+	for (int i = 1; i <= N; i++)
+	{
+		if ((a[i] % 2 == 1) && (k != 0))
+		{
+			s = a[i];
+			a[i] = k;
+			k = s;
+		}
+		if ((a[i] % 2 == 1) && (k == 0))
+		{
+			k = a[i];
+		}
+	}
+	for (int i = 1;i <= N;i++)
+	{
+		cout << a[i] << " ";
+	}
+}
