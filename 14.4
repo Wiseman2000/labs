@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+	int k, N;
+	int a;
+	int mas[1000];
+	cin >> N;
+	for (int i = 1;i <= N;i++)
+	{
+		cin >> mas[i];
+	}
+	if (mas[1] > mas[2])
+	{
+		k = 1;
+	}
+	for (int i = 2; i <= N; i = i + 1)
+	{
+		if ((mas[i] > mas[i + 1]) && (mas[i] > mas[i - 1]))
+		{
+			k = i;
+		}
+	}
+	if (mas[N] > mas[N-1])
+	{
+		k = N;
+	}
+	cout << k << endl;
+}
