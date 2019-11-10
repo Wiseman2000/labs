@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+	int min, N;
+	int a;
+	int mas[1000];
+	cin >> N;
+	for (int i = 1;i <= N;i++)
+	{
+		cin >> mas[i];
+	}
+	min = 2147483647;
+	for (int i = 2; i <= N; i = i + 2)
+	{
+		if (mas[i] < min)
+		{
+			min = mas[i];
+		}
+	}
+	cout << min << endl;
+}
