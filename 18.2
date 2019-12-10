@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int  M, N, K, sum, pr;
+	int a[100][100];
+	cin >> M >> N >> K;
+	for (int i = 1;i <= M;i++)
+	{
+		for (int j = 1;j <= N;j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	pr = 1;
+	sum = 0;
+	for (int i = 1;i <= N;i++)
+	{
+		pr = pr * a[K][i];
+		sum = sum + a[K][i];
+	}
+	cout << sum << " " << pr << endl;
+}
