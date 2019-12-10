@@ -1,0 +1,36 @@
+#include <iostream>
+#include <math.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int  N, kol;
+	float sr, sum, M;
+    int a[100][100];
+	cin >> M >> N;
+	for (int i = 1;i <= M;i++)
+	{
+		for (int j = 1;j <= N;j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	for (int i = 1;i <= N;i++)
+	{
+		kol = 0;
+		sum = 0;
+		for (int j = 1;j <= M;j++)
+		{
+			sum = sum + a[j][i];
+		}
+		sr = sum / M;
+		for (int j = 1;j <= M;j++)
+		{
+			if (a[j][i] > sr)
+			{
+				kol++;
+			}
+		}
+		cout << kol << " ";
+	}
+}
