@@ -1,0 +1,35 @@
+#include <iostream>
+#include <math.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int  k,M, N, pr,min;
+	int a[100][100];
+	cin >> M >> N;
+	for (int i = 1;i <= M;i++)
+	{
+		for (int j = 1;j <= N;j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	min = 1;
+	k = 1;
+	for (int i = 1;i <= M;i++)
+		min = min * a[i][1];
+	for (int i = 1;i <= N;i++)
+	{
+		pr = 1;
+		for (int j = 1;j <= M;j++)
+		{
+			pr = pr * a[j][i];
+        }
+		if (pr < min)
+		{
+			min = pr;
+			k = i;
+		}
+	}
+	cout << min << " " << k << endl;
+}
