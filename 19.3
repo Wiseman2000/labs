@@ -1,0 +1,38 @@
+#include <iostream>
+#include <math.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int  p, N, M, s, k;
+    int a[100][100];
+	cin >> M >> N;
+	for (int i = 1;i <= M;i++)
+	{
+		for (int j = 1;j <= N;j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	s = 1;
+	while (s <= M / 2)
+	{
+		k = 1;
+		for (int i = 1;i <= N / 2;i++)
+		{
+			p = a[s][i];
+			a[s][i] = a[M - s + 1][N - k+1];
+			a[M - s + 1][N - k+1] = p;
+			k++;
+		}
+		s++;
+	}
+	for (int i = 1;i <= M;i++)
+	{
+		for (int j = 1;j <= N;j++)
+		{
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
