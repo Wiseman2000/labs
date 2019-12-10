@@ -1,0 +1,61 @@
+#include <iostream>
+#include <math.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int  f, N, k, s, p;
+	int a[100][100];
+	cin >> N;
+	for (int i = 1;i <= N;i++)
+	{
+		for (int j = 1;j <= N;j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	k = 1;
+	s = 1;
+	p = N;
+	f = 1;
+	while ((k != N / 2 + 1) && (s != N / 2 + 1))
+	{
+		cout << a[k][s] << " ";
+		if ((k == s) && (k < N / 2 + 1))
+		{
+			while (k < p)
+			{
+				k = k + 1;
+				cout << a[k][s] << " ";
+			}
+		}
+		if (s - k < 0)
+		{
+			while (s < p)
+			{
+				s = s + 1;
+				cout << a[k][s] << " ";
+			}
+		}
+		if ((k == s) && (k > N / 2 + 1))
+		{
+			while (k > f)
+			{
+				k--;
+				cout << a[k][s] << " ";
+			}
+		}
+		if (s - k > 0)
+		{
+			while (s > f+1)
+			{
+				s--;
+				cout << a[k][s] << " ";
+			}
+		}
+		f++;
+		p--;
+		k++;
+	}
+	cout << a[k][s];
+}
