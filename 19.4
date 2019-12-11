@@ -1,0 +1,47 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int** zam(int a,int b, int ** c,int m)
+{
+	int l;
+    for (int i = 0; i <m; i++)
+	{
+		l = c[a][i];
+		c[a][i] = c[b][i];
+		c[b][i] = l;
+	}
+	return c;
+}
+int main()
+{
+	int  p, N, M, min, k;
+	cin >> M >> N;
+	int** a = new int* [M];
+	for(int i=0;i<M;i++)
+		a[i]=new int[N];
+	for (int i = 0;i < M;i++)
+	{
+		for (int j = 0;j < N;j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	for (int i = 0; i < M;i++)
+	{
+		for  (int j = 0; j < M; j++)
+		{
+			if (a[i][0] < a[j][0])
+			{
+				zam(i, j, a, N);
+			}
+		}
+	}
+	for (int i = 0;i < M;i++)
+	{
+		for (int j = 0;j < N;j++)
+		{
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
