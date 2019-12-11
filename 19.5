@@ -1,0 +1,46 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+	int  sum,M,k,l;
+	cin >> M;
+	int** a = new int* [M];
+	for (int i = 0;i < M;i++)
+		a[i] = new int[M];
+	for (int i = 0;i < M;i++)
+	{
+		for (int j = 0;j < M;j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	cout << a[0][0] << " ";
+	for (int i = 1; i < M-1;i++)
+	{
+		sum = 0;
+		k = i;
+		l = 0;
+		do
+		{
+			sum = sum + a[k][l];
+			k--;
+			l++;
+		} while (k >= 0);
+		cout << sum << " ";
+	}
+	for (int i = 1; i < M - 1;i++)
+	{
+		sum = 0;
+		k = i;
+		l = M-1;
+		while (k <= M-1)
+		{
+			sum = sum + a[l][k];
+			k++;
+			l--;
+		}
+		cout << sum << " ";
+	}
+	cout << a[M - 1][M - 1];
+}
