@@ -1,0 +1,55 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+	int  K, r, p, j1, j2, N, k, l, t;
+	cin >> N >> K;
+	long int* a = new long int [N];
+	long int* b = new long int [N];
+	long int* c = new  long int [N];
+	long int* d = new long int[N];
+	for (int i = 0;i < N;i++)
+	{
+			cin >> a[i];
+	}
+	t = 0;
+	j1 = 0;
+	j2 = 0;
+	while (t < N)
+	{
+		k = 1;
+		l = a[t];
+		while ((a[t] == a[t + 1])&&(t!=N))
+		{
+			k++;
+			t++;
+		}
+		b[j1] = k;
+		j1++;
+		c[j2] = l;
+		j2++;
+		t++;
+	}
+	cout << j1 << " " << j2 << endl;
+	if (K < j1)
+	{
+		p = b[K-1];
+		b[K-1] = b[j1-1];
+		b[j1-1] = p;
+		p = c[K-1];
+		c[K-1] = c[j2-1];
+		c[j2-1] = p;
+	}
+	r = 0;
+	for (int i = 0;i < j1;i++)
+	{
+		for (int j = 0;j < b[i];j++)
+		{
+			d[r] = c[i];
+			r++;
+		}
+	}
+	for (int i = 0;i < r;i++)
+		cout << d[i] << " ";
+}
