@@ -1,1 +1,41 @@
-
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+	float p, k,max;
+	int j, N;
+	cin >> N ;
+	int* a = new int [N];
+	int* b = new int [N];
+	for (int i = 0;i < N;i++)
+	{
+			cin >> a[i];
+	}
+	for (int i = 0;i < N;i++)
+	{
+		cin >> b[i];
+	}
+	max = 0;
+	for (int i = 0; i < N; i++)
+	{
+		if ((a[i] > 0) && (b[i] < 0))
+		{
+			p = pow(a[i],2) + pow(b[i],2);
+			k = pow(p, 0.5);
+			if (k > max)
+			{
+				j = i;
+				max = k;
+			}
+		}
+	}
+	if (max != 0)
+	{
+		cout << a[j] << " " << b[j];
+	}
+	else
+	{
+		cout << 0;
+	}
+}
