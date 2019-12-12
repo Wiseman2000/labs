@@ -1,0 +1,46 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+	int p, L ,j, N, k, l, t;
+	cin >> N >> L;
+	int* a = new int[N];
+	int* b = new int[N];
+	for (int i = 0;i < N;i++)
+	{
+		cin >> a[i];
+	}
+	t = 0;
+	j = 0;
+	while (t < N)
+	{
+		p = t;
+		k = 1;
+		l = a[t];
+		while ((a[t] == a[t + 1]) && (t != N))
+		{
+			k++;
+			t++;
+		}
+		if (k > L)
+		{
+			b[j] = 0;
+			j++;
+		}
+		else
+		{
+			for (int i = p;i <= t;i++)
+			{
+				b[j] = a[i];
+				j++;
+			}
+		}
+		t++;
+	}
+	for (int i = 0; i < j; i++)
+	{
+		cout << b[i] << " ";
+	}
+	cout << endl;
+}
