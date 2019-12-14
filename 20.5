@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+using namespace std;
+int main()
+{
+	int k, kol,r;
+	bool a;
+	string s,s0;
+        getline(cin, s);
+		getline(cin, s0);
+		kol = 0;
+		for (int i = 0; i <s.length(); i++)
+		{
+			k = 0;
+			a = 1;
+			r = i;
+			while ((k< s0.length())&&(a==1))
+			{
+				if (s[r] == s0[k])
+				{
+					k++;
+					r++;
+				}
+				else a = 0;
+			}
+			if (a == 1) kol++;
+		}
+		cout << kol << endl;
+}
