@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <clocale>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	char b;
+	int k,r;
+	bool a;
+	string s;
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+        getline(cin, s);
+		k = 0;
+		while (k < s.length())
+		{
+			r = 0;
+			a = 1;
+			while ((a == 1) && (k < s.length()))
+			{
+				if (s[k] != ' ')
+				{
+					r++;
+					if (r == 1) b = s[k];
+					if ((r!=1)&&(s[k]==b))
+						s[k]='.';
+					k++;
+				}
+				else a = 0;
+			}
+			k++;
+		}
+		cout << s << endl;
+}
