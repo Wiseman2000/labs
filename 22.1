@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <clocale>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	int k;
+	string s;
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	getline(cin, s);
+	k = 0;
+	while (s[k] != ' ')
+		k++;
+	s.erase(0, k + 1);
+	cout << s;
+}
