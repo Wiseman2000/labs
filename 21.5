@@ -7,18 +7,26 @@ int main()
 {
 	char b;
 	int k,r;
-	bool a;
+	int a;
 	string s;
-	string s0 = "уеоыаэяиёюЁУЕОАЫЭЯИЮ";
+	string s0;
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
         getline(cin, s);
 		k = 0;
+		r = 0;
+		a = 0;
 		for (int i = 0;i < s.length();i++)
 		{
-			if (s[i] == '/') k++;
-			if (s[i] == '.') k++;
-			if ((k == 2) && (s[i] != '/')) cout << s[i];
+			if (s[i] == '/')
+				r++;
+		}
+		for (int i = 0;i < s.length();i++)
+		{
+			if (s[i] == '.') a++;
+			if ((k == r) && (a == 0)) cout << s[i];
+			if (s[i] == '/')
+				k++;
 		}
 }
